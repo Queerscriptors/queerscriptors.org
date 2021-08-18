@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-17 13:45+GMT\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: https://queerscriptors.org/ (content/contents+en.lr:index.title)
+msgid "Queerscriptors"
+msgstr ""
+
+#: https://queerscriptors.org/ (content/contents+en.lr:index.body)
+msgid "A community of people that translate queer games"
+msgstr ""
+
+#: https://queerscriptors.org/ (content/contents+en.lr:index.about_title)
+msgid "Join us!"
+msgstr ""
+
+#: https://queerscriptors.org/ (content/contents+en.lr:index.about_body)
+msgid ""
+"The Queerscriptor community does it's translations on a [weblate](https://"
+"littleroot.net/weblate/). Currently we do our coordination in a channel on "
+"the [Next Gaymer](https://nextgaymer.com/) Discord."
+msgstr ""
+
+#: https://queerscriptors.org/projects/lucahboad/
+#: (content/projects/lucahboad/contents+en.lr:project.title)
+msgid "Lucah Born Of A Dream"
+msgstr ""
+
+#: https://queerscriptors.org/projects/lucahboad/
+#: (content/projects/lucahboad/contents+en.lr:project.body)
+msgid "This is our current project"
+msgstr ""
+
+#: https://queerscriptors.org/projects/butterflysoup/
+#: (content/projects/butterflysoup/contents+en.lr:project.title)
+msgid "Butterfly Soup"
+msgstr ""
+
+#: https://queerscriptors.org/projects/butterflysoup/
+#: (content/projects/butterflysoup/contents+en.lr:project.body)
+msgid "We are nearly finished translating Butterfly Soup into French"
+msgstr ""
+
+#: templates/header.html:5
+msgid "Menu"
+msgstr ""
+
+#: templates/header.html:10
+msgid "Join us"
+msgstr ""
+
+#: templates/header.html:11
+msgid "Projects"
+msgstr ""
+
+#: templates/header.html:12
+msgid "Contact"
+msgstr ""

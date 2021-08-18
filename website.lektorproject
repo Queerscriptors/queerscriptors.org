@@ -1,0 +1,17 @@
+[project]
+name = Queerscriptors
+url_style = relative
+locale = en
+
+[alternatives.en]
+name = English
+primary = yes
+locale = en_US
+
+[alternatives.fr]
+name = French
+url_prefix = /fr/
+locale = fr
+
+[packages]
+lektor-i18n = 0.4.4
