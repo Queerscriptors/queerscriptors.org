@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block page %}
+{% set objs = site.query('/developer').include_undiscoverable(true).all() %}
+<!-- Projects-->
+<section class="projects-section bg-light" id="projects">
+	<div class="container px-4 px-lg-5">
+		{% for obj in objs %}
+			{% set image = obj.attachments.images.first() %}
+			<!-- Project One Row-->
+			<div class="row gx-0 mb-5 mb-lg-0 justify-content-end">
+				<div class="col-lg-6">
+					<div class="bg-black text-center h-100 project">
+						<div class="d-flex h-100">
+							<div class="project-text w-100 my-auto text-center text-lg-left text-white">
+								<h4>{{ obj.title }}</h4>
+								{{ obj.body }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+{% endblock %}

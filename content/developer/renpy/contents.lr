@@ -1,0 +1,15 @@
+sort_key: 0
+---
+title: Extracting, converting, translating and reconverting Ren'Py games
+---
+body:
+
+TODO: Add stuff about how to translate Ren'Py games 
+
+You need three tools: Ren'Py SDK, rpatool.py (or any other program that can unarchive rpa) and renpy-ttk
+
+Ren'Py games use an archive.rpa, wherein most of the game actually is. I don't believe it is nessecarry to extract the game to make translations, but that's what I do anyways. Here I use rpatool.py. See it's documentation on how to use it.
+
+Once that is done, run renpy-ttk and generate a pot file. Once it is done, the pot file is uploaded to weblate. If there already are translations (finished or not), it may be a good idea to use renpy-ttk to get the po files for them, and upload them to weblate. For new translations, if you have a common.rpy translation, use Ren'Py SDK to generate the translation, then replace the common and then generate a po file that can be uploaded to weblate, this saves the translators time.
+
+To update the translations from weblate. Download the po file, run renpy-ttk and use the sensible option. That should be it. Note the caveat with renpy-ttk: *something something, don't extract after update?*
