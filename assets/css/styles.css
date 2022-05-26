@@ -11500,12 +11500,12 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: #000;
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #000;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -11553,7 +11553,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/prideflag.svg");
+  background: linear-gradient(rgba(0,77,255,0.8), rgba(0,77,255,0.5));
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11581,7 +11581,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  animation: rainbow 50s linear infinite;
+  animation: rainbow 100s linear infinite;
 }
 @keyframes rainbow{
     100%{
@@ -11616,9 +11616,8 @@ body {
 
 .about-section {
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  background: linear-gradient(to bottom, #750787 0%, rgba(117, 7, 135, 1.5) 75%, rgba(117, 7, 135, 0.8) 100%);
-  filter: brightness(0.7);
+  padding-bottom: 2.5rem;
+  background: linear-gradient(rgba(0,77,255,0.5), rgba(var(--bs-light-rgb)));
   z-index: 1;
 }
 .about-section-text { /* Hack to not darken text */
