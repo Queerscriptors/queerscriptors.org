@@ -6,45 +6,23 @@
 	<div class="container px-4 px-lg-5">
 		{% for project in projects %}
 			{% set image = project.attachments.images.first() %}
-			{% if project.type %}
-				<!-- Project One Row-->
-				<div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-					<div class="col-lg-6"><img class="img-fluid" src="{{ image|url }}" alt="project image" /></div>
-					<div class="col-lg-6">
-						<div class="bg-black text-center h-100 project">
-							<div class="d-flex h-100">
-								<div class="project-text w-100 my-auto text-center text-lg-left">
-									<h4 class="text-white">{{ project.title }}</h4>
-									<p class="mb-0 text-white-80">{{ project.body }}</p>
-									<hr class="d-none d-lg-block mb-0 ms-0" />
-									<a href="https://littleroot.net/weblate/engage/{{project.weblate}}/">
-										<img src="https://littleroot.net/weblate/widgets/{{project.weblate}}/-/svg-badge.svg" alt="Translation status" />
-									</a>
-								</div>
+			<div class="row gx-0 mb-5 mb-md-0 justify-content-center">
+				<div class="col-lg-6"><img class="img-fluid" src="{{ image|url }}" alt="project image" /></div>
+				<div class="col-lg-6 {% if project.type %} order-lg-first {% endif %} ">
+					<div class="bg-black text-center h-100 project">
+						<div class="d-flex h-100">
+							<div class="project-text w-100 my-auto text-center">
+								<h4 class="text-white">{{ project.title }}</h4>
+								<p class="mb-0 text-white-80">{{ project.body }}</p>
+								<hr class="d-none d-lg-block mb-0" />
+								<a href="https://littleroot.net/weblate/engage/{{project.weblate}}/">
+									<img src="https://littleroot.net/weblate/widgets/{{project.weblate}}/-/svg-badge.svg" alt="Translation status" />
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			{% else %}
-				<!-- Project Two Row-->
-				<div class="row gx-0 mb-5 mb-md-0 justify-content-center">
-					<div class="col-lg-6"><img class="img-fluid" src="{{ image|url }}" alt="project image" /></div>
-					<div class="col-lg-6 order-lg-first">
-						<div class="bg-black text-center h-100 project">
-							<div class="d-flex h-100">
-								<div class="project-text w-100 my-auto text-center text-lg-right">
-									<h4 class="text-white">{{ project.title }}</h4>
-									<p class="mb-0 text-white-80">{{ project.body }}</p>
-									<hr class="d-none d-lg-block mb-0 me-0" />
-									<a href="https://littleroot.net/weblate/engage/{{project.weblate}}/">
-										<img src="https://littleroot.net/weblate/widgets/{{project.weblate}}/-/svg-badge.svg" alt="Translation status" />
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			{% endif %}
+			</div>
 		{% endfor %}
 	</div>
 </section>
