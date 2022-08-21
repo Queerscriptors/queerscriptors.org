@@ -5,3 +5,5 @@ type: true
 title: Butterfly Soup
 ---
 body: We have translated Butterfly Soup into French
+---
+weblate: butterfly-soup
