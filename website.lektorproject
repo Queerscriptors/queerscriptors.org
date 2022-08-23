@@ -1,5 +1,6 @@
 [project]
 name = Queerscriptors
+url = https://queerscriptors.org/
 url_style = relative
 locale = en
 
