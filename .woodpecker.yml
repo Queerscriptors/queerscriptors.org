@@ -7,6 +7,6 @@ pipeline:
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
       - lektor build --output-path public
-      - cp -r public/ /var/www/queerscriptors/
+      - cp -r public/* /var/www/queerscriptors/
     volumes:
       - /var/www/queerscriptors:/var/www/queerscriptors
