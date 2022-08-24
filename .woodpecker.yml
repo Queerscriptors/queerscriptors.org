@@ -1,10 +1,11 @@
 pipeline:
   build:
-    image: debian
+    image: python:3.8-bullseye
     commands:
       - apt-get update
-      - apt-get install -y python3-venv python3-pip
-      - pip install lektor
+      - apt-get install -y git ca-certificates gettext wget python3-pip
+      - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
+      - python3 -m pip install --require-hashes -r requirements.txt
       - lektor build --output-path public
       - cp -r public/ /var/www/queerscriptors/
     volumes:
