@@ -1,7 +1,7 @@
-pipeline:
-  workspace:
+workspace:
     base: /queerscriptors
     path: src/
+pipeline:
   build:
     image: python:3.8-bullseye
     commands:
