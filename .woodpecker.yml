@@ -10,7 +10,7 @@ pipeline:
   check_l10n_freshness:
     image: plugins/discord
     settings:
-      webhook_id: 1012800295882993785/i
+      webhook_id: 1012800295882993785
       webhook_token: _lCskHlo41SHKMpqE1tzwDTQM7R8LAPJaxiArWhllZrYAxEdf8Jz0hRf6UD17EeyfnCd
       message: "Test from woodpecker"
   publish:
