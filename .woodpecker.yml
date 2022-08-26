@@ -21,13 +21,13 @@ pipeline:
       - git clone https://lab.encryptionin.space/Queerscriptors/l10n.git
       - echo 'lets see if there are any updates in the strings for translation'
       - l10n/check_po_status.py main 
-  send_discord_message:
+  discord:
     image: appleboy/drone-discord
+    when:
+      - status: [ sucess, failure ]
     settings:
       webhook_id:
         from_secret: discord_id
       webhook_token:
         from_secret: discord_token
       message: "The lektor build has different pot than weblate-website"
-    when:
-      - status: [ sucess, failure ]
