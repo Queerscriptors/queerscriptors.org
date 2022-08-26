@@ -6,6 +6,7 @@ pipeline:
       - apt-get install -y git ca-certificates gettext wget python3-pip python3-babel
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
+      - rm -rf i18n
       - git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
       - lektor build --output-path public
   publish:
