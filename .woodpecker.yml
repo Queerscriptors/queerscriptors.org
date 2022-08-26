@@ -7,6 +7,12 @@ pipeline:
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
       - lektor build --output-path public
+  check_l10n_freshness:
+    image: appleboy/drone-discord
+    settings:
+      webhook_id: 1012800295882993785/i
+      webhook_token: _lCskHlo41SHKMpqE1tzwDTQM7R8LAPJaxiArWhllZrYAxEdf8Jz0hRf6UD17EeyfnCd
+      message: "Test from woodpecker"
   publish:
     image: debian
     commands:
