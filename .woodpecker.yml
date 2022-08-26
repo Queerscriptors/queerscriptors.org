@@ -21,10 +21,10 @@ pipeline:
       - git clone https://lab.encryptionin.space/Queerscriptors/l10n.git
       - echo 'lets see if there are any updates in the strings for translation'
       - l10n/check_po_status.py main 
-  discord:
-    image: appleboy/drone-discord
     when:
       - branch: main
+  discord:
+    image: appleboy/drone-discord
     settings:
       webhook_id:
         from_secret: discord_id
