@@ -22,7 +22,7 @@ pipeline:
       - echo 'lets see if there are any updates in the strings for translation'
       - l10n/check_po_status.py main 
     when:
-      - branch: main
+      branch: main
   discord:
     image: appleboy/drone-discord
     settings:
