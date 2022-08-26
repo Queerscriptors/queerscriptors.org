@@ -16,6 +16,7 @@ pipeline:
   check_l10n_freshness:
     image: python:3.8-bullseye
     commands:
+      - apt-get update
       - apt-get install gettext git python3-dev python3-setuptools i18nspector python3-polib python3-requests ca-certificates apt-utils -y
       - git clone https://lab.encryptionin.space/Queerscriptors/l10n.git
       - echo 'lets see if there are any updates in the strings for translation'
@@ -28,3 +29,5 @@ pipeline:
       webhook_token:
         from_secret: discord_token
       message: "The lektor build has different pot than weblate-website"
+    when:
+      - status: [ sucess, failure ]
