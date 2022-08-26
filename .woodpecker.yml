@@ -1,12 +1,4 @@
 pipeline:
-  check_l10n_freshness:
-    image: plugins/discord
-    settings:
-      webhook_id:
-        from_secret: webook_id
-      webhook_token:
-        from_secret: webhook_token
-      message: "Test"
   build:
     image: python:3.8-bullseye
     commands:
@@ -15,7 +7,15 @@ pipeline:
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
       - lektor build --output-path public
-    publish:
+  check_l10n_freshness:
+    image: plugins/discord
+    settings:
+      webhook_id:
+        from_secret: webook_id
+      webhook_token:
+        from_secret: webhook_token
+      message: "Test"
+  publish:
     image: debian
     commands:
       - cp -r public/* /var/www/queerscriptors/
