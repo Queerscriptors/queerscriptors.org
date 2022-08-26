@@ -28,5 +28,3 @@ pipeline:
       webhook_token:
         from_secret: discord_token
       message: "The lektor build has different pot than weblate-website"
-    when:
-      - status: failure
