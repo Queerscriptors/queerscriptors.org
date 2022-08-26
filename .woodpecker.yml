@@ -8,7 +8,7 @@ pipeline:
       - python3 -m pip install --require-hashes -r requirements.txt
       - lektor build --output-path public
   check_l10n_freshness:
-    image: plugins/discord
+    image: appleboy/drone-discord
     settings:
       webhook_id:
         from_secret: discord_id
