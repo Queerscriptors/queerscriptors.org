@@ -2,7 +2,27 @@ pipeline:
   build:
     image: python:3.8-bullseye
     commands:
-      - apt-get update
+      - echo Etc/UTC > /etc/timezone
+      - export LC_ALL=C.UTF-8
+      - export DEBIAN_FRONTEND=noninteractive
+      - export APT_CACHE_DIR="$(pwd)/.cache/apt"
+      - rm -f /etc/apt/apt.conf.d/docker-clean
+      - mkdir -p "${APT_CACHE_DIR}/archives"
+      - mkdir -p "${APT_CACHE_DIR}/lists"
+      - cat > /etc/apt/apt.conf.d/99gitlab <<EOF
+        quiet "1";
+        Acquire::Retries "20";
+        APT::Clean-Installed "1";
+        APT::Install-Recommends "0";
+        APT::Install-Suggests "0";
+        APT::Get::Assume-Yes "true";
+        Binary::apt::APT::Keep-Downloaded-Packages "1";
+        Dir::Cache::Archives "${APT_CACHE_DIR}/archives";
+        Dir::State::Lists "${APT_CACHE_DIR}/lists";
+        Dpkg::Use-Pty "0";
+        EOF
+      - apt-get update -qq
+      - apt-get upgrade -qy
       - apt-get install -y git gettext ca-certificates wget python3-pip
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
