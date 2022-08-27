@@ -16,7 +16,7 @@ pipeline:
   publish:
     image: debian
     commands:
-      - cp -r public/* /var/www/queerscriptors/
+      - cp -r . /var/www/queerscriptors/
     volumes:
       - /var/www/queerscriptors:/var/www/queerscriptors 
   check_l10n_freshness:
