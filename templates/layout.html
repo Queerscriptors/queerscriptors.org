@@ -2,11 +2,9 @@
 <html lang="{{ this.alt }}">
 {% include 'meta.html' %}
 <body id="page-top">
-{% block page %} 
-	{% include 'masterhead.html' %}
-	{% include 'about.html' %}
-	{% block projects %}{% endblock %}
-{% endblock %}
+{% include 'masterhead.html' %}
+{% include 'about.html' %}
+{% block projects %}{% endblock %}
 {% include 'footer.html' %}        
 </body>
 </html>
