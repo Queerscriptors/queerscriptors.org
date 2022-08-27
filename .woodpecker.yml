@@ -8,6 +8,7 @@ pipeline:
       - python3 -m pip install --require-hashes -r requirements.txt
       - rm -rf i18n
       - git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
+      - lektor plugin reinstall
       - lektor build --output-path public
       - lektor build --output-path public
       - lektor build --output-path public
