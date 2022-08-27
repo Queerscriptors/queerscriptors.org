@@ -9,7 +9,6 @@ pipeline:
       - pip install Lektor
       - rm -rf i18n
       - git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
-      - lektor plugin reinstall
       - lektor build --output-path public
       - lektor build --output-path public
       - lektor build --output-path public

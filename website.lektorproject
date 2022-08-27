@@ -6,8 +6,8 @@ locale = en
 
 [alternatives.en]
 name = English
-url_prefix = /
 primary = yes
+url_prefix = /
 locale = en
 
 [alternatives.fr]
