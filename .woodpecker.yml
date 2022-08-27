@@ -9,18 +9,7 @@ pipeline:
       - rm -f /etc/apt/apt.conf.d/docker-clean
       - mkdir -p "${APT_CACHE_DIR}/archives"
       - mkdir -p "${APT_CACHE_DIR}/lists"
-      - cat > /etc/apt/apt.conf.d/99gitlab <<EOF
-        quiet "1";
-        Acquire::Retries "20";
-        APT::Clean-Installed "1";
-        APT::Install-Recommends "0";
-        APT::Install-Suggests "0";
-        APT::Get::Assume-Yes "true";
-        Binary::apt::APT::Keep-Downloaded-Packages "1";
-        Dir::Cache::Archives "${APT_CACHE_DIR}/archives";
-        Dir::State::Lists "${APT_CACHE_DIR}/lists";
-        Dpkg::Use-Pty "0";
-        EOF
+      - ./.aptconf
       - apt-get update -qq
       - apt-get upgrade -qy
       - apt-get install -y git gettext ca-certificates wget python3-pip
