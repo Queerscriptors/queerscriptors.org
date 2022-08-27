@@ -2,16 +2,7 @@ pipeline:
   build:
     image: python:3.8-bullseye
     commands:
-      - echo Etc/UTC > /etc/timezone
-      - export LC_ALL=C.UTF-8
-      - export DEBIAN_FRONTEND=noninteractive
-      - export APT_CACHE_DIR="$(pwd)/.cache/apt"
-      - rm -f /etc/apt/apt.conf.d/docker-clean
-      - mkdir -p "${APT_CACHE_DIR}/archives"
-      - mkdir -p "${APT_CACHE_DIR}/lists"
-      - ./.aptconf
-      - apt-get update -qq
-      - apt-get upgrade -qy
+      - apt-get update
       - apt-get install -y git gettext ca-certificates wget python3-pip
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
