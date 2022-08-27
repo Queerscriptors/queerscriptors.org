@@ -3,7 +3,7 @@ pipeline:
     image: python:3.8-bullseye
     commands:
       - apt-get update
-      - apt-get install -y git gettext python3-pip python3-venv python3-babel
+      - apt-get install -y git gettext python3-pip virtualenv python3-babel
       - virtualenv venv
       - . venv/bin/activate
       - pip install Lektor
