@@ -2,12 +2,20 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<meta name="description" content="{{ this.meta_desc }}" />
+	
 	<!-- Open Graph Protocol -->
 	<meta name="og:title" content="Queerscriptors" />
 	<meta name="og:type" content="website" />
 	<meta name="og:image" content="{{ '/images/ogp.png'|url(absolute=True,external=True) }}" />
 	<meta name="og:url" content="{{ '.'|url(absolute=True,external=True) }}" />
 	<meta name="og:description" content="{{ this.meta_desc }}" />
+	<!-- Twitter card (OGP equv) -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:domain" content="queerscriptors.org" />
+	<meta name="twitter:url" content="{{ '.'|url(absolute=True,external=True) }}" />
+	<meta name="twitter:title" content="Queerscriptors" />
+	<meta name="twitter:description" content="{{ this.meta_desc }}" />
+	<meta name="twitter:image" content="{{ '/images/ogp.png'|url(absolute=True,external=True) }}" />
 
 	<title>{{ this.title }}</title>
 	<link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg'|asseturl }}" />
