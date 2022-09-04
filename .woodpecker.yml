@@ -9,6 +9,8 @@ pipeline:
       - rm -rf i18n
         #- git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
       - lektor build --output-path public
+      - rm -r public
+      - lektor build --output-path public
       - lektor build --output-path public
       - lektor build --output-path public
   publish:
