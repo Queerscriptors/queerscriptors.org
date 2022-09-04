@@ -7,7 +7,7 @@ pipeline:
       - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
       - rm -rf i18n
-        #- git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
+      - git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
       - lektor build --output-path public
       - rm -r public
       - lektor build --output-path public
