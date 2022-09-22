@@ -11710,3 +11710,14 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+.crop {
+  width: 300px;
+  display: block;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 400px;
+  margin-left: -100px;
+}
