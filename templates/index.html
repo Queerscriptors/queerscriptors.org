@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
-{% block projects %}
+{% block page %}
+{% include 'masterhead.html' %}
+{% include 'about.html' %}
 <!-- Projects-->
 <section class="projects-section bg-light" id="projects">
 	<div class="container px-4 px-lg-5">
@@ -10,13 +12,9 @@
 				<div class="col-lg-6 {% if not project.type %} order-lg-first {% endif %} ">
 					<div class="bg-black text-center h-100 project">
 						<div class="d-flex h-100">
-							<div class="project-text w-100 my-auto text-center">
-								<h4 class="text-white">{{ project.title }}</h4>
-								<p class="mb-0 text-white-80">{{ project.body }}</p>
-								<hr class="d-none d-lg-block mb-0" />
-								<a href="https://littleroot.net/weblate/engage/{{ project.weblate }}/">
-									<img src="https://littleroot.net/weblate/widgets/{{ project.weblate }}/-/svg-badge.svg" alt="Translation status" />
-								</a>
+							<div class="w-100 text-center">
+								<h1 class="text-white mb-5">{{ project.title }}</h4>
+								<a href="{{ project|url }}" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Details</a>
 							</div>
 						</div>
 					</div>
