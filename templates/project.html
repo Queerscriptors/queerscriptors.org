@@ -9,14 +9,14 @@
     </div>
     <div class="col-md-4">
       <h3 class="my-3">Project Description</h3>
-      <p>{{project.body}}</p>
+      <p>{{this.body}}</p>
       <h3 class="my-3">Weblate status</h3>
-      <a href="https://littleroot.net/weblate/engage/{{ project.weblate }}/">
-			  <img src="https://littleroot.net/weblate/widgets/{{ project.weblate }}/-/multi-auto.svg" alt="Translation status" />
+      <a href="https://littleroot.net/weblate/engage/{{ this.weblate }}/">
+			  <img src="https://littleroot.net/weblate/widgets/{{ this.weblate }}/-/multi-auto.svg" alt="Translation status" />
 			</a>
       <h3 class="my-3">Project Details</h3>
       <div class="w-100 text-center">
-        <a href="https://littleroot.net/weblate/engage/{{ project.weblate }}/" class="btn btn-primary"><i class="fa fa-language" aria-hidden="true"></i> Translate</a>
+        <a href="https://littleroot.net/weblate/engage/{{ this.weblate }}/" class="btn btn-primary"><i class="fa fa-language" aria-hidden="true"></i> Translate</a>
         <a href="{{this.website}}" class="btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i> Download</a>
       </div>
     </div>
