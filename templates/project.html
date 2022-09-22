@@ -1,5 +1,25 @@
 {% extends "layout.html" %}
 {% block page %}
 {% include 'header.html' %}
-<h1>{{ this.name }}</h1>
+<div class="container my-5 pt-5">
+  <h1 class="my-4">{{this.title}}</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <img class="img-fluid" src="{{this.attachments.images.first()|url}}" alt="">
+    </div>
+    <div class="col-md-4">
+      <h3 class="my-3">Project Description</h3>
+      <p>{{project.body}}</p>
+      <h3 class="my-3">Weblate status</h3>
+      <a href="https://littleroot.net/weblate/engage/{{ project.weblate }}/">
+			  <img src="https://littleroot.net/weblate/widgets/{{ project.weblate }}/-/multi-auto.svg" alt="Translation status" />
+			</a>
+      <h3 class="my-3">Project Details</h3>
+      <div class="w-100 text-center">
+        <a href="https://littleroot.net/weblate/engage/{{ project.weblate }}/" class="btn btn-primary"><i class="fa fa-language" aria-hidden="true"></i> Translate</a>
+        <a href="{{this.website}}" class="btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i> Download</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
