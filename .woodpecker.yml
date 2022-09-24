@@ -17,6 +17,7 @@ pipeline:
     commands:
       - rm -r /var/www/queerscriptors/*
       - cp -r public/* /var/www/queerscriptors/
+      - cp i18n/* /var/www/queerscriptors/i18n/
     volumes:
       - /var/www/queerscriptors:/var/www/queerscriptors 
   #check_l10n_freshness:
