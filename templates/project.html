@@ -8,17 +8,17 @@
       <img class="img-fluid" src="{{this.attachments.images.first()|url}}" alt="">
     </div>
     <div class="col-md-4">
-      <h3 class="my-3">Project Description</h3>
+      <h3 class="my-3">{{ _("Project Description") }}</h3>
       <p>{{this.body}}</p>
-      <h3 class="my-3">Weblate status</h3>
+      <h3 class="my-3">{{ _("Weblate status") }}</h3>
       <a class="crop" href="https://littleroot.net/weblate/engage/{{ this.weblate }}/">
 			  <img src="https://littleroot.net/weblate/widgets/{{ this.weblate }}/-/multi-auto.svg" alt="Translation status" />
 			</a>
-      <h3 class="my-3">Project Details</h3>
+      <h3 class="my-3">{{ _("Project Details") }}</h3>
       <div class="w-100 text-center">
         <div class="mx-auto" style="width: 210px;">
-          <a href="https://littleroot.net/weblate/engage/{{ this.weblate }}/" class="btn btn-primary w-100 mb-2 px-0"><i class="fa fa-language" aria-hidden="true"></i> Translate</a>
-          <a href="{{this.website}}" class="px-0 btn btn-primary w-100"><i class="fa fa-external-link" aria-hidden="true"></i> Download</a>
+          <a href="https://littleroot.net/weblate/engage/{{ this.weblate }}/" class="btn btn-primary w-100 mb-2 px-0"><i class="fa fa-language" aria-hidden="true"></i> {{ _("Translate") }}</a>
+          <a href="{{this.website}}" class="px-0 btn btn-primary w-100"><i class="fa fa-external-link" aria-hidden="true"></i> {{ _("Download") }}</a>
         </div>
       </div>
     </div>
