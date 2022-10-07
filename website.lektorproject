@@ -14,3 +14,8 @@ locale = en
 name = French
 url_prefix = /fr/
 locale = fr
+
+[alternatives.po]
+name = Polish
+url_prefix = /po/
+locale = po
