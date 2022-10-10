@@ -19,3 +19,8 @@ locale = fr
 name = Polish
 url_prefix = /pl/
 locale = pl
+
+[alternatives.id]
+name = Indonesian
+url_prefix = /id/
+locale = id
