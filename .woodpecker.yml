@@ -12,6 +12,7 @@ pipeline:
       - rm -r public
       - lektor build --output-path public -f scss
       - lektor build --output-path public -f scss
+      - lektor build --output-path public -f scss
   publish:
     image: debian
     commands:
