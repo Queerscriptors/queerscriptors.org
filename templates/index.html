@@ -5,7 +5,7 @@
 <!-- Projects-->
 <section class="projects-section bg-light" id="projects">
 	<div class="container px-4 px-lg-5">
-    {% leftOrRight = 1 %}
+    {% set leftOrRight = 1 %}
     {% for project in this.children %}
 			{% set image = project.attachments.images.first() %}
 			<div class="row gx-0 mb-5 mb-md-0 justify-content-center">
@@ -21,7 +21,7 @@
 					</div>
 				</div>
 			</div>
-      {% i = i + 1 %}
+      {% set leftOrRight = leftOrRight + 1 %}
 		{% endfor %}
 	</div>
 </section>
