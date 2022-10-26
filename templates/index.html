@@ -5,12 +5,11 @@
 <!-- Projects-->
 <section class="projects-section bg-light" id="projects">
 	<div class="container px-4 px-lg-5">
-    {% set leftOrRight = 1 %}
     {% for project in this.children %}
 			{% set image = project.attachments.images.first() %}
 			<div class="row gx-0 mb-5 mb-md-0 justify-content-center">
 				<div class="col-lg-6"><img class="img-fluid" src="{{ image|url }}" alt="project image" /></div>
-				<div class="col-lg-6 {% if leftOrRight is divisibleby 2 %} order-lg-first {% endif %} ">
+				<div class="col-lg-6 {% if project.sort_key % 2 == 0 or project.sort_key == 0 %} order-lg-first {% endif %} ">
 					<div class="bg-black text-center h-100 project">
 						<div class="d-flex h-100">
 							<div class="my-4 my-lg-auto w-100 text-center">
@@ -21,7 +20,6 @@
 					</div>
 				</div>
 			</div>
-      {% set leftOrRight = leftOrRight + 1 %}
 		{% endfor %}
 	</div>
 </section>
