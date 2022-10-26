@@ -1,0 +1,19 @@
+/* FONT PATH
+ * -------------------------- */
+
+$vr-font-path:        "../fonts/varelaround" !default;
+$vr-font-family:      "Varela Round" !default;
+$vr-version:          "1.2.0" !default;
+
+
+@font-face {
+  font-family: '#{$vr-font-family}';
+  src: url('#{$vr-font-path}/varelaround-regular.eot?v=#{$vr-version}');
+  src: url('#{$vr-font-path}/varelaround-regular.eot?#iefix&v=#{$vr-version}') format('embedded-opentype'),
+    url('#{$vr-font-path}/varelaround-regular.woff2?v=#{$vr-version}') format('woff2'),
+    url('#{$vr-font-path}/varelaround-regular.woff?v=#{$vr-version}') format('woff'),
+    url('#{$vr-font-path}/varelaround-regular.ttf?v=#{$vr-version}') format('truetype'),
+//  src: url('#{$vr-font-path}/varelaround-regular.otf') format('opentype'); // used when developing fonts
+  font-weight: 400;
+  font-style: normal;
+}
