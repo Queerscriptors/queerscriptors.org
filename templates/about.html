@@ -2,25 +2,33 @@
 {% block page %}
 {% include 'header.html' %}
 
-<div class="text-center">
-  <h1>What is Queerscriptors?</h1>
-</div>
+<div class="container my-5 pt-5">
+  <div class="text-center">
+    <h1>What is Queerscriptors?</h1>
+  </div>
 
-<div class="card" id="transl">
-  <div class="card-header">
-    Translators
+  <div class="card mt-3" id="intro">
+    <div class="card-body">
+      {{ this.intro }}
+    </div>
   </div>
-  <div class="card-body">
-    <p class="card-text">{{ this.transl }}</p>
-  </div>
-</div>
 
-<div class="card" id="devs">
-  <div class="card-header">
-    Game Developers
+  <div class="card mt-4" id="transl">
+    <div class="card-header">
+      Translators
+    </div>
+    <div class="card-body">
+      {{ this.transl }}
+    </div>
   </div>
-  <div class="card-body">
-    <p class="card-text">{{ this.devs }}</p>
+
+  <div class="card mt-4" id="devs">
+    <div class="card-header">
+      Game Developers
+    </div>
+    <div class="card-body">
+      {{ this.devs }}
+    </div>
   </div>
 </div>
 {% endblock %}
