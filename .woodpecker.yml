@@ -20,6 +20,19 @@ pipeline:
       - cp -r i18n/ /var/www/queerscriptors/i18n/
     volumes:
       - /var/www/queerscriptors:/var/www/queerscriptors 
+    when:
+      branch: main
+  publish-dev:
+    image: debian
+    commands:
+      - rm -r /var/www/dev/queerscriptors/*
+      - cp -r public/* /var/www/dev/queerscriptors/
+      - cp -r i18n/ /var/www/dev/queerscriptors/i18n/
+    volumes:
+      - /var/www/dev/queerscriptors:/var/www/dev/queerscriptors 
+    when:
+      branch: dev
+
   #check_l10n_freshness:
   #  image: debian:bullseye
   #  commands:
@@ -28,3 +41,4 @@ pipeline:
   #    - git clone https://lab.encryptionin.space/Queerscriptors/l10n.git
   #    - echo 'lets see if there are any updates in the strings for translation'
   #    - l10n/check_po_status.py main 
+branches: [ main, dev ]
