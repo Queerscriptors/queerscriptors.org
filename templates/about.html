@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block page %}
+{% include 'header.html' %}
+
+<div class="text-center">
+  <h1>What is Queerscriptors?</h1>
+</div>
+
+<div class="card" id="transl">
+  <div class="card-header">
+    Translators
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ this.transl }}</p>
+  </div>
+</div>
+
+<div class="card" id="devs">
+  <div class="card-header">
+    Game Developers
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ this.devs }}</p>
+  </div>
+</div>
+{% endblock %}
