@@ -31,7 +31,8 @@ pipeline:
     volumes:
       - /var/www/dev/queerscriptors:/var/www/dev/queerscriptors 
     when:
-      branch: dev
+      branch:
+        exclude: main
 
   #check_l10n_freshness:
   #  image: debian:bullseye
@@ -41,4 +42,3 @@ pipeline:
   #    - git clone https://lab.encryptionin.space/Queerscriptors/l10n.git
   #    - echo 'lets see if there are any updates in the strings for translation'
   #    - l10n/check_po_status.py main 
-branches: [ main, dev ]
