@@ -1,12 +1,14 @@
 {% set alts = get_alts() %}
 <div class="btn-group dropdown pull-right">
   <button type="button" class="btn btn-dark bg-dark dropdown-toggle btn-block my-3 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ this.alt.name }}
+    {{ this.alt }}
   </button>
   <div class="dropdown-menu">
     {% for alt in alts %}
       {% if this.alt != alt %}
-        <a class="dropdown-item" href="{{ this.path|url(alt=alt) }}">{{ alt.name }}</a>
+      {% for thing in alt %}
+        <a class="dropdown-item" href="{{ this.path|url(alt=alt) }}">{{ thing }}</a>
+      {% endif %}
       {% endif %}
     {% endfor %}
   </div>
