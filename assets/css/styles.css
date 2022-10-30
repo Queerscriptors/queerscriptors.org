@@ -11722,6 +11722,12 @@ body {
   position: relative;
 }
 
+.dropdown-toggle {
+  padding: 0.375rem 0.75rem;
+  background-color: white;
+  color: black;
+
+}
 .dropdown-toggle::after {
   display: inline-block;
   width: 0;
@@ -11823,4 +11829,10 @@ body {
   font-size: 0.875rem;
   color: #848E97;
   white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  overflow-y: scroll;
+  max-height: 350px;
 }

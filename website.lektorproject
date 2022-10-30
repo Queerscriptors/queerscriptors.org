@@ -10,17 +10,48 @@ primary = yes
 url_prefix = /
 locale = en
 
+[alternatives.de]
+name = German
+url_prefix = /de/
+locale = de
+
+[alternatives.es]
+name = Spanish
+url_prefix = /es/
+locale = es
+
+[alternatives.es_419]
+name = LatAmSpanish
+url_prefix = /es_419/
+locale = es_419
+
 [alternatives.fr]
 name = French
 url_prefix = /fr/
 locale = fr
+
+[alternatives.id]
+name = Indonesian
+url_prefix = /id/
+locale = id
 
 [alternatives.pl]
 name = Polish
 url_prefix = /pl/
 locale = pl
 
-[alternatives.id]
-name = Indonesian
-url_prefix = /id/
-locale = id
+[alternatives.pt]
+name = Portuguese
+url_prefix = /pt/
+locale = pt
+
+[alternatives.pt_BR]
+name = Portuguese Brazil
+url_prefix = /pt_BR/
+locale = pt_BR
+
+[alternatives.ru]
+name = Russian
+url_prefix = /ru/
+locale = ru
+
