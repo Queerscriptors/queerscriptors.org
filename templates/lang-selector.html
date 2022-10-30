@@ -1,0 +1,13 @@
+{% set alts = bag('alternatives').items() %}
+<div class="btn-group dropdown pull-right">
+  <button type="button" class="btn dropdown-toggle btn-block my-3 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ bag('alternatives', this.alt, 'language') }}
+  </button>
+  <div class="dropdown-menu">
+    {% for id, item in bag('alternatives').items() %}
+      {% if this.alt != id %}
+        <a class="dropdown-item" href="{{ this.path|url(alt=id) }}">{{ item.language }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
