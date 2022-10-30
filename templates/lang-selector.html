@@ -8,7 +8,7 @@
       {% if this.alt != alt %}
       {% for thing in alt %}
         <a class="dropdown-item" href="{{ this.path|url(alt=alt) }}">{{ thing }}</a>
-      {% endif %}
+      {% endfor %}
       {% endif %}
     {% endfor %}
   </div>
