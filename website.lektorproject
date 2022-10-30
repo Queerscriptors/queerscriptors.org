@@ -10,6 +10,11 @@ primary = yes
 url_prefix = /
 locale = en
 
+[alternatives.cs]
+name = Czech
+url_prefix = /cs/
+locale = cs
+
 [alternatives.de]
 name = German
 url_prefix = /de/
