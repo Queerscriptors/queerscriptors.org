@@ -11727,6 +11727,7 @@ body {
   background-color: white;
   color: black;
   box-shadow: none !important;
+  text-transform: none;
 }
 .dropdown-toggle::after {
   display: inline-block;
