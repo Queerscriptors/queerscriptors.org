@@ -6,7 +6,7 @@
 	<!-- Open Graph Protocol -->
 	<meta name="og:title" content="Queerscriptors" />
 	<meta name="og:type" content="website" />
-	<meta name="og:image" content="{{ '/images/ogp.png'|url(absolute=True,external=True) }}" />
+	<meta name="og:image" content="{{ this.ogpimage|url(absolute=True,external=True) }}" />
 	<meta name="og:url" content="{{ '.'|url(absolute=True,external=True) }}" />
 	<meta name="og:description" content="{{ _("A community of people that translate queer games") }}" />
 	<!-- Twitter card (OGP equv) -->
@@ -15,7 +15,7 @@
 	<meta name="twitter:url" content="{{ '.'|url(absolute=True,external=True) }}" />
 	<meta name="twitter:title" content="Queerscriptors" />
 	<meta name="twitter:description" content="{{ _("A community of people that translate queer games") }}" />
-	<meta name="twitter:image" content="{{ '/images/ogp.png'|url(absolute=True,external=True) }}" />
+	<meta name="twitter:image" content="{{ this.ogpimage|url(absolute=True,external=True) }}" />
 
 	<title>{{ this.title }}</title>
   <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg'|asseturl }}" />

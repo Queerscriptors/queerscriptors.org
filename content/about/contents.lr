@@ -1,5 +1,7 @@
 _model: about
 ---
+ogpimage: /images/ogp.png
+---
 intro:
 
 ---

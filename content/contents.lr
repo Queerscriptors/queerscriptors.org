@@ -1,5 +1,7 @@
 _model: index
 ---
+ogpimage: /images/ogp.png
+---
 title: Queerscriptors
 ---
 body: A community of people that translate queer games

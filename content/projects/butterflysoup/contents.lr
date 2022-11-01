@@ -1,5 +1,7 @@
 _model: project
 ---
+ogpimage: main.jpg
+---
 sort_key: 2
 ---
 title: Butterfly Soup
