@@ -11708,14 +11708,14 @@ body {
 }
 
 .crop {
-  width: 300px;
+  width: 350px;
   display: block;
   overflow: hidden;
 }
 
 .crop img {
   width: 400px;
-  margin-left: -100px;
+  margin-left: -50px;
 }
 
 .dropdown {
