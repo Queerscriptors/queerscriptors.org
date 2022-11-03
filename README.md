@@ -1,10 +1,9 @@
 This is the source code for the website [queerscriptors.org](https://queerscriptors.org). It uses [lektor](https://getlektor.com)
 
-Some thoughs on nice-to-have:
+It is available from:  
 
-- As much as possible should be as easy as possible to edit for new people. Example: It should currently be easy to add new projects
-- JS not required.
+- [lab.encryptionin.space](https://lab.encryptionin.space/Queerscriptors/Queerscriptors.org) (canonical)
+- [github](https://github.com/queerscriptors/queerscriptors.org)
+- [gitlab](https://gitlab.com/queerscriptors/queerscriptors.org)
 
----
-
-A good place to look at how to do stuff may be the Tor Projects websites: https://gitlab.torproject.org/tpo/web
+I am attempting to create this website without JavaScript.
