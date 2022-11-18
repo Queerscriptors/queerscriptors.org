@@ -4,7 +4,7 @@ pipeline:
     commands:
       - apt-get update
       - apt-get install -y git gettext ca-certificates wget python3-pip
-      - wget https://gitlab.torproject.org/tpo/tpa/ci-templates/-/raw/main/lektor-requirements.txt -O requirements.txt
+      - wget https://gitlab.torproject.org/tpo/web/lego/-/raw/main/lektor-requirements.txt -O requirements.txt
       - python3 -m pip install --require-hashes -r requirements.txt
       - rm -rf i18n
       - git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
