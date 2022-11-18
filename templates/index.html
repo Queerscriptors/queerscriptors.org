@@ -3,7 +3,10 @@
 {% include 'masterhead.html' %}
 {% include 'joinus.html' %}
 <!-- Projects-->
-<div class="projects-section bg-light" id="projects">
+<div class="p-5 projects-section bg-light" id="projects">
+  <div class="text-center">
+    <h2 class="display-5 text-black pt-5 pb-3 mb-3">Featured games</h2>
+	</div>
 	<div class="container px-4 px-lg-5">
     {% for id, item in bag('featured').items() %}
 			{% set image = item.path+'main.jpg' %}
@@ -21,6 +24,9 @@
 				</div>
 			</div>
 		{% endfor %}
+	</div>
+  <div class="text-center pt-5">
+		<a href="games/" class="btn btn-primary btn-lg"><i class="fa fa-search" aria-hidden="true"></i> View all games</a>
 	</div>
 </div>
 {% endblock %}

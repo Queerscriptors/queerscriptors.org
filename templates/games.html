@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block ogpdesc %}{{ this.shortbody }}{% endblock %}
+{% block ogptitle %}{{ this.title }} | Queerscriptors{% endblock %}
+{% block twitterdesc %}{{ this.shortbody }}{% endblock %}
+{% block twittertitle %}{{ this.title }} | Queerscriptors{% endblock %}
+{% block page %}
+{% include 'header.html' %}
+{% for project in this.children %}
+  {% set image = project.attachments.images.first() %}
+  <div class="card mb-3">
+      <div class="row gb-0" >
+          <div class="col-md-0" >
+              <img src="{{image}}" class="img-fluid rounded-start" >
+          </div>
+          <div class="col-md-8" >
+              <div class="card-body" >
+                  <h5 class="card-title" >{{project.title}}</h5>
+                  <p class="card-text" >{{project.shortbody}}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+{% endblock %}
