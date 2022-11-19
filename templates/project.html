@@ -20,6 +20,7 @@
           <a href="{{this.website}}" class="btn btn-primary"><i class="fa fa-external-link" aria-hidden="true"></i> {{ _("Download") }}</a>
         </div>
       </div>
+      {% if this.weblate %}
       <h3 class="my-3">{{ _("Weblate status") }}</h3>
       <a href="https://littleroot.net/weblate/engage/{{ this.weblate }}/{% if this.alt != "en" %}{{this.alt}}/{% endif %}">
         <img src="https://littleroot.net/weblate/widgets/{{ this.weblate }}/{% if this.alt != "en" %}{{this.alt}}{% else %}-{% endif %}/multi-auto.svg" alt="Translation status">
@@ -27,6 +28,7 @@
       <div class="mt-3 text-center">
         <a href="https://littleroot.net/weblate/engage/{{ this.weblate }}/{% if this.alt != "en" %}{{this.alt}}/{% endif %}" class="btn btn-primary mb-2"><i class="fa fa-language" aria-hidden="true"></i> {{ _("Translate") }}</a>
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
