@@ -6937,6 +6937,11 @@ textarea.form-control-lg {
   position: absolute !important;
 }
 
+@media (min-width: 768px) {
+  .position-absolute-md {
+    position: absolute !important;
+  }
+}
 .position-fixed {
   position: fixed !important;
 }
