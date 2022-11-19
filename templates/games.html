@@ -18,8 +18,8 @@
           </div>
           <div class="col-md-8" >
               <div class="card-body h-100 position-relative" >
-                <h3 class="card-title" >{{project.title}}</h3>{% if project.weblate %}<span class="badge bg-success">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
-                  <p class="card-text" >{{project.body}}</p>
+                <h3 class="card-title {% if project.weblate %}mb-0{% endif %}" >{{project.title}}</h3>{% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
+                  {{project.body}}
                   <div class="position-absolute bottom-0 end-0 mb-2 me-2">
                     <a href="{{project|url}}" class="btn btn-primary btn-sm">{{ _("View") }} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                   </div>
