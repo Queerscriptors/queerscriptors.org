@@ -3589,14 +3589,13 @@ textarea.form-control-lg {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  padding: 1.75rem 2.5rem !important;
+  font-size: 1.25rem !important;
   border-radius: 0.3rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  padding: 0.75rem 1.25rem !important;
   border-radius: 0.2rem;
 }
 
@@ -6938,6 +6937,11 @@ textarea.form-control-lg {
   position: absolute !important;
 }
 
+@media (min-width: 768px) {
+  .position-absolute-md {
+    position: absolute !important;
+  }
+}
 .position-fixed {
   position: fixed !important;
 }
