@@ -21,7 +21,11 @@
                 <h3 class="card-title {% if project.weblate %}mb-0{% endif %}" >{{project.title}}</h3>{% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
                   {{project.body}}
                   <div class="d-md-inline-block d-grid position-absolute-md bottom-0 end-0 mb-md-2 me-md-2">
-                    <a href="{{project|url}}" class="btn btn-primary btn-sm">{{ _("View") }} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    {% if project.weblate %}
+                    <a href="{{project|url}}" class="btn btn-primary btn-sm">{{ _("More") }} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    {% else %}
+                    <a href="{{project.website}}" class="btn btn-primary btn-sm">{{ _("Download") }} <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    {% endif %}
                   </div>
               </div>
           </div>

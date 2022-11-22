@@ -5,9 +5,9 @@
 <!-- Projects-->
 <div class="p-5 projects-section bg-light" id="projects">
   <div class="text-center">
-    <h2 class="display-5 text-black pt-5 pb-3 mb-3">Featured games</h2>
+    <h2 class="display-5 text-black pt-5 pb-3 mb-3">{{ _("Featured games") }}</h2>
 	</div>
-	<div class="container px-4 px-lg-5">
+	<div class="container px-0 px-lg-5">
     {% for id, item in bag('featured').items() %}
 			{% set image = item.path+'main.jpg' %}
 			<div class="row gx-0 mb-5 mb-md-0 justify-content-center">
@@ -26,7 +26,7 @@
 		{% endfor %}
 	</div>
   <div class="text-center pt-5">
-		<a href="games/" class="btn btn-primary btn-lg"><i class="fa fa-search" aria-hidden="true"></i> View all games</a>
+		<a href="games/" class="btn btn-primary btn-lg"><i class="fa fa-search" aria-hidden="true"></i> {{ _("View a list of games") }}</a>
 	</div>
 </div>
 {% endblock %}
