@@ -8138,6 +8138,19 @@ textarea.form-control-lg {
   border-top-left-radius: 0.25rem !important;
 }
 
+@media (max-width: 575.98px) {
+  .rounded-top-sm {
+    border-top-left-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
+  }
+}
+@media (min-width: 575.98px) {
+  .rounded-start-md {
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-left-radius: 0.25rem !important;
+  }
+}
+
 .visible {
   visibility: visible !important;
 }
