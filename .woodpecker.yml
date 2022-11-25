@@ -1,4 +1,10 @@
 pipeline:
+  prepare-dev:
+    image: debian
+    commands:
+      - sed -i -r -e 's/queerscriptors\.org/dev\.queerscriptors\.org/g' website.lektorproject
+    when:
+      branch: dev
   build:
     image: python:3.8-bullseye
     commands:
