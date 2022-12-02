@@ -25,11 +25,6 @@ name = Spanish
 url_prefix = /es/
 locale = es
 
-[alternatives.es_419]
-name = LatAmSpanish
-url_prefix = /es_419/
-locale = es_419
-
 [alternatives.fr]
 name = French
 url_prefix = /fr/
