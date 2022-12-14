@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /*!
+* Queerscriptors.org - Queerscriptors (https://queerscriptors.org)
+* Copyright 2021-2022 Queerscriptors
+* Licensed under MIT
+*/
+/*!
 * Start Bootstrap - Grayscale v7.0.3 (https://startbootstrap.com/theme/grayscale)
 * Copyright 2013-2021 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
@@ -8136,6 +8141,19 @@ textarea.form-control-lg {
 .rounded-start {
   border-bottom-left-radius: 0.25rem !important;
   border-top-left-radius: 0.25rem !important;
+}
+
+@media (max-width: 575.98px) {
+  .rounded-top-sm {
+    border-top-left-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
+  }
+}
+@media (min-width: 575.98px) {
+  .rounded-start-md {
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-left-radius: 0.25rem !important;
+  }
 }
 
 .visible {
