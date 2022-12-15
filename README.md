@@ -6,14 +6,20 @@ It is available from:
 - [github](https://github.com/queerscriptors/queerscriptors.org)
 - [gitlab](https://gitlab.com/queerscriptors/queerscriptors.org)
 
-I am attempting to create this website without JavaScript.
+I do not always visit github and gitlab, so either send me an email (hackerncoder@<canonical without lab.>) or ping me on matrix (or if you use discord, general is bridged to matrix so write there)
+
+---
+
+Some notes:
+
+I am attempting to use no JavaScript on this website.
 
 ---
 
 Licensing, or what is a website?
 This website contains no JavaScript and has essentially no code made by myself, therefore it isn't a program, the GPL or similar licenses do not seem applicable, of course I am not a lawyer.
 
-I wish to use CC-BY 4.0 where applicable, or a similar license for anything it isn't applicable to. If you know anything about licensing and think this should be made better please reach out to me
+But, I wish to make this website libre software or whatever is the equivalent. If you know anything about licensing and think this should be made better please reach out to me
 
 Do note:
  - Not all images are made by us and are therefore, © their respective owners
