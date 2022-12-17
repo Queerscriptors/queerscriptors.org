@@ -9,7 +9,7 @@
 
   <div class="card mt-4" id="getting-started">
     <div class="card-header">
-      {{ _("Getting setup") }}
+      Getting setup
     </div>
     <div class="card-body">
       {{ this.gettingstarted }}
@@ -18,10 +18,20 @@
 
   <div class="card mt-4" id="learn-tech">
     <div class="card-header">
-      {{ _("Learn the quirks") }}
+      Learn the quirks
     </div>
     <div class="card-body">
-      {{ this.learntech }}
+      <p>Various game engines have some techincal stuff you need to know, e.g. in Ren'Py <code>%</code> is a special character, so you need to write <code>%%</code> instead</p>
+      <details>
+        <summary>Ren'Py</summary>
+        <ul>
+          <li>As said above, there are characters that are special and therefore need special treatment, e.g. %% instead of %</li>
+          <li>Ren'Py uses <code>{}</code> and <code>{/}</code> to denote styling, so <code>{b}bold{/b}</code> would display as <b>bold</b>.
+            <ul>
+              <li>A full list of what chars and names corrospond to what output <a href="https://www.renpy.org/doc/html/text.html">can be found in the Ren'Py documentation</a>.</li>
+            </ul>
+          </li>
+        </ul>
     </div>
   </div>
 </div>
