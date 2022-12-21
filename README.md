@@ -6,7 +6,7 @@ It is available from:
 - [github](https://github.com/queerscriptors/queerscriptors.org)
 - [gitlab](https://gitlab.com/queerscriptors/queerscriptors.org)
 
-I do not always visit github and gitlab, so either send me an email (hackerncoder@<canonical without lab.>) or ping me on matrix (or if you use discord, general is bridged to matrix so write there)
+I do not always visit github and gitlab, so either send me an email (hackerncoder@[canonical without lab.]) or ping me on matrix (or if you use discord, general is bridged to matrix so write there)
 
 ---
 
