@@ -21,21 +21,21 @@ pipeline:
   publish:
     image: debian
     commands:
-      - rm -r /var/www/queerscriptors/*
-      - cp -r public/* /var/www/queerscriptors/
-      - cp -r i18n/ /var/www/queerscriptors/i18n/
+      - rm -r /var/www/queer/main*
+      - cp -r public/* /var/www/queer/main
+      - cp -r i18n/ /var/www/queer/i18n/
     volumes:
-      - /var/www/queerscriptors:/var/www/queerscriptors 
+      - /var/www/queer/main:/var/www/queer/main 
     when:
       branch: main
   publish-dev:
     image: debian
     commands:
-      - rm -r /var/www/dev/queerscriptors/*
-      - cp -r public/* /var/www/dev/queerscriptors/
-      - cp -r i18n/ /var/www/dev/queerscriptors/i18n/
+      - rm -r /var/www/queer/dev/*
+      - cp -r public/* /var/www/queer/dev/
+      - cp -r i18n/ /var/www/queer/dev/i18n/
     volumes:
-      - /var/www/dev/queerscriptors:/var/www/dev/queerscriptors 
+      - /var/www/queer/dev/:/var/www/queer/dev/
     when:
       branch:
         exclude: main
