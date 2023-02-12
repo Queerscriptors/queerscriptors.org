@@ -21,11 +21,11 @@ pipeline:
   publish:
     image: debian
     commands:
-      - rm -r /var/www/queer/main*
-      - cp -r public/* /var/www/queer/main
+      - rm -r /var/www/queer/main/*
+      - cp -r public/* /var/www/queer/main/
       - cp -r i18n/ /var/www/queer/i18n/
     volumes:
-      - /var/www/queer/main:/var/www/queer/main 
+      - /var/www/queer/main/:/var/www/queer/main/ 
     when:
       branch: main
   publish-dev:
