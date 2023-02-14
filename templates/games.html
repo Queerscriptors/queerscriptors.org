@@ -18,22 +18,24 @@
       </div>
       <div class="col-md-8" >
         <div class="card-body h-100 position-relative card-grid" >
+          <h3 class="card-title {% if project.weblate %}mb-0{% endif %}">{{project.title}}</h3>
+          {% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
           <div class="card-grid-div">
-            <h3 class="card-title {% if project.weblate %}mb-0{% endif %}">{{project.title}}</h3>
-            {% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
             {{project.body}}
           </div>
-          <div class="d-md-inline-block d-grid mb-md-2 card-grid-btn">
-            {% if project.weblate %}
-            <a href="{{project|url}}" class="btn btn-primary btn-sm">{{ _("More") }} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            {% else %}
-            <a href="{{project.website}}" class="btn btn-primary btn-sm">{{ _("Download") }} <i class="fa fa-external-link" aria-hidden="true"></i></a>
-            {% endif %}
+          <div class="d-md-flex card-grid-btn justify-content-end">
+            <div class="d-md-inline-block d-grid me-md-2 mb-md-2 align-self-end">
+              {% if project.weblate %}
+              <a href="{{project|url}}" class="btn btn-primary btn-sm">{{ _("More") }} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              {% else %}
+              <a href="{{project.website}}" class="btn btn-primary btn-sm">{{ _("Download") }} <i class="fa fa-external-link" aria-hidden="true"></i></a>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
 {% endblock %}
