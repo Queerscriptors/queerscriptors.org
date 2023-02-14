@@ -18,8 +18,10 @@
       </div>
       <div class="col-md-8" >
         <div class="card-body h-100 position-relative card-grid" >
-          <h3 class="card-title {% if project.weblate %}mb-0{% endif %}">{{project.title}}</h3>
-          {% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
+          <div>
+            <h3 class="card-title {% if project.weblate %}mb-0{% endif %}">{{project.title}}</h3>
+            {% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
+          </div>
           <div class="card-grid-div">
             {{project.body}}
           </div>
