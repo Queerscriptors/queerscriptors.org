@@ -7,7 +7,7 @@
 {% include 'header.html' %}
 <div class="container my-5 pt-5" >
   <div class="text-center" >
-    <h1>A list of queer games</h1>
+    <h1>{{ _("A list of queer games") }}</h1>
   </div>
 {% for project in this.children %}
   {% set image = project.attachments.images.first() %}
@@ -18,9 +18,9 @@
           </div>
           <div class="col-md-8" >
               <div class="card-body h-100 position-relative" >
-                <h3 class="card-title {% if project.weblate %}mb-0{% endif %}" >{{project.title}}</h3>{% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
-                  {{project.body}}
-                  <div class="d-md-inline-block d-grid position-absolute-md bottom-0 end-0 mb-md-2 me-md-2">
+                <h3 class="card-title {% if project.weblate %}mb-0{% endif %}">{{project.title}}</h3>{% if project.weblate %}<span class="badge bg-success mb-2">{{ _("Translated by the Queerscriptors") }}</span>{% endif %}
+                <div class="card-grid-div">{{project.body}}</div>
+                  <div class="d-md-inline-block d-grid mb-md-2 card-grid-btn">
                     {% if project.weblate %}
                     <a href="{{project|url}}" class="btn btn-primary btn-sm">{{ _("More") }} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     {% else %}
