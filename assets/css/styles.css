@@ -4659,8 +4659,7 @@ textarea.form-control-lg {
 
 @media (min-width: 768px) {
   .card-body {
-    padding-left: 1rem;
-    padding-top: 1rem;
+    padding: 1rem 0 0 1rem;
   }
 
   .card-grid {
