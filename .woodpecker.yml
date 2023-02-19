@@ -23,7 +23,7 @@ pipeline:
     commands:
       - rm -r /var/www/queer/main/*
       - cp -r public/* /var/www/queer/main/
-      - cp -r i18n/ /var/www/queer/i18n/
+      - cp -r i18n/ /var/www/queer/main/i18n/
     volumes:
       - /var/www/queer/main/:/var/www/queer/main/ 
     when:
