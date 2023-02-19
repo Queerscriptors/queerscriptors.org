@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block page %}
+{% include 'header.html' %}
+
+<div class="container my-5 pt-5">
+  <div class="text-center">
+    <h1>Join the Queerscriptors</h1>
+  </div>
+
+  <div class="card mt-4" id="getting-started">
+    <div class="card-header">
+      Getting setup
+    </div>
+    <div class="card-body">
+      {{ this.gettingstarted }}
+    </div>
+  </div>
+
+  <div class="card mt-4" id="learn-weblate">
+    <div class="card-header">
+      Learn Weblate
+    </div>
+    <div class="card-body">
+      <p>Once you've created an account you will probably see your dashboard, it's empty since you haven't started working on any translations, so lets fix that. For projects that have a translation in your language already, they will be shown in "Suggested translations". To find all projects go up to the top and select "Projects" then "Browse all projects".</p>
+      <p> As of writing there are two projects I would recommend working on: Butterfly Soup 2 and website (that's this thing) if you click on either (in the list of all projects) you will find that there are two "components" one is probably called the same as the project, you do not want that one, that is the glossary. The actual translation happens in the other one, in many cases it is named "translate" or "translations" (or something along those lines), but it can be named anything.</p>
+      <p>Once you have found the "translations" component of the project you want to translate you will see a list of languages, maybe yours is in that list, if so just click on it a skip the rest of this paragraph. If not you will want to add your language, most likely weblate will be helpful and show it at the top of the list with a + to the left, you can just click that +. Otherwise use "Start new translation" at the bottom of the list, then search for your language, choose it and click on "Start new translation". It will take some time to work through everything, so be patient. Once it is done you will be taken to the newly created language</p>
+      <p>You can now click "Translate" and begin translating! (Also check out Zen mode, found in the upper right corner once you have clicked translate)</p>
+    </div>
+  </div>
+
+  <div class="card mt-4" id="learn-quirks">
+    <div class="card-header">
+      Learn the quirks
+    </div>
+    <div class="card-body">
+      <p>Various game engines have some technical stuff you need to know, e.g. in Ren'Py <code>%</code> is a special character, so you need to write <code>\%</code> or <code>%%</code> instead.</p>
+      <details>
+        <summary>Ren'Py</summary>
+        <ul>
+          <li>As said above, there are characters that are special and therefore need special treatment, e.g. <code>%%</code> or <code>\%</code> instead of <code>%</code> and <code>\\</code> instead of <code>\</code>. Most likely you will find these things are also in the source language, so you can just copy it over</li>
+            <ul>
+              <li>A full list of special characters <a href="https://renpy.org/doc/html/text.html#escape-characters">can be found in the Ren'Py documentation</a>.</li>
+            </ul>
+          <li>Ren'Py uses <code>{<i>char</i>}</code> and <code>{/<i>char</i>}</code> to denote styling, so <code>{b}bold{/b}</code> would display as <b>bold</b>.
+            <ul>
+              <li>A full list of what chars and names correspond to what output <a href="https://www.renpy.org/doc/html/text.html#styling-and-text-tags">can be found in the Ren'Py documentation</a>.</li>
+            </ul>
+          </li>
+          <li>For RTL languages: Usage of <code>{<i>char</i>}</code> inside the string, things like <code>{w=0.35}</code>, seem to break Ren'Py. Usage of things like <code>{big}</code> which surround the string seem to be fine.</li>
+        </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
