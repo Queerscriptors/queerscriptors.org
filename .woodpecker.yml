@@ -7,6 +7,7 @@ steps:
       branch: dev
   build:
     image: containers.torproject.org/tpo/tpa/base-images/python:bookworm
+    entrypoint: [ "/bin/sh", "-c", "echo $CI_SCRIPT | base64 -d | /bin/bash -e" ]
     commands:
       - apt-get update
       - apt-get install -y git gettext ca-certificates wget python3-polib
@@ -39,5 +40,4 @@ steps:
     volumes:
       - /var/www/queer/dev/:/var/www/queer/dev/
     when:
-      branch:
-        exclude: main
+      branch: dev
