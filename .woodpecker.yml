@@ -6,12 +6,14 @@ steps:
     when:
       branch: dev
   build:
-    image: python:3.8-bullseye
+    image: containers.torproject.org/tpo/tpa/base-images/python:bookworm
     commands:
       - apt-get update
-      - apt-get install -y git gettext ca-certificates wget python3-pip
+      - apt-get install -y git gettext ca-certificates wget python3-polib
       - wget https://gitlab.torproject.org/tpo/web/lego/-/raw/main/lektor-requirements.txt -O requirements.txt
-      - python3 -m pip install --require-hashes -r requirements.txt
+      - python3 -m venv venv
+      - source venv/bin/activate 
+      - pip install --require-hashes -r requirements.txt
       - rm -rf i18n
       - git clone https://lab.encryptionin.space/Queerscriptors/weblate-website.git i18n
       - lektor build --output-path public -f scss
