@@ -6,17 +6,9 @@ steps:
     when:
       branch: dev
   build:
-    image: containers.torproject.org/tpo/tpa/base-images/python:bookworm
+    image: containers.torproject.org/tpo/web/container-images/lektor:3.3.12
     entrypoint: [ "/bin/sh", "-c", "echo $CI_SCRIPT | base64 -d | /bin/bash -e" ]
     commands:
-      - apt-get update
-      - apt-get install -y git gettext ca-certificates wget python3-polib
-      - python3 -m venv venv
-      - source venv/bin/activate 
-      - python3 -m ensurepip --upgrade
-      - python3 -m pip install --upgrade 'setuptools<82'
-      - python3 -m pip install --upgrade pip
-      - python3 -m pip install --require-hashes -r requirements.txt
       - rm -rf i18n
       - git clone https://git.encryptionin.space/Queerscriptors/weblate-website.git i18n
       - lektor build --output-path public -f scss
