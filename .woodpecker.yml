@@ -13,8 +13,10 @@ steps:
       - apt-get install -y git gettext ca-certificates wget python3-polib
       - python3 -m venv venv
       - source venv/bin/activate 
-      - pip install setuptools
-      - pip install --require-hashes -r requirements.txt
+      - python3 -m ensurepip --upgrade
+      - python3 -m pip install --upgrade setuptools
+      - python3 -m pip install --upgrade pip
+      - python3 -m pip install --require-hashes -r requirements.txt
       - rm -rf i18n
       - git clone https://git.encryptionin.space/Queerscriptors/weblate-website.git i18n
       - lektor build --output-path public -f scss
