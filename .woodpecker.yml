@@ -6,7 +6,7 @@ steps:
     when:
       branch: dev
   build:
-    image: containers.torproject.org/tpo/tpa/base-images/python:trixie
+    image: containers.torproject.org/tpo/tpa/base-images/python:bookworm
     entrypoint: [ "/bin/sh", "-c", "echo $CI_SCRIPT | base64 -d | /bin/bash -e" ]
     commands:
       - apt-get update
